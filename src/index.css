@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@media (min-width: 1024px) {
+	.stats {
+		position: absolute !important;
+		left: 300px !important;
+		z-index: 1 !important;
+	}
+}
+@media (max-width: 1023px) {
+	.stats {
+		position: absolute !important;
+		left: 100px !important;
+		z-index: 1 !important;
+	}
+}

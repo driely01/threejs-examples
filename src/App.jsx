@@ -1,14 +1,24 @@
-import { useState } from 'react'
 import './App.css'
+import ShadowsCtl from './components/ShadowsCtl'
+import FirstGeometry from './components/FirstGeometry'
+import Menu from './components/Menu'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Earth from './components/Earth'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div className="text-black bg-green-500">hello</div>
-    </>
+    <div className='flex'>
+			<BrowserRouter>
+				<Menu />
+				<Routes>
+					<Route path='/' element={<ShadowsCtl />} />
+					<Route path='/first' element={<FirstGeometry />} />
+					<Route path='/earth' element={<Earth />} />
+				</Routes>
+			</BrowserRouter>
+    </div>
   )
 }
 
 export default App
+
