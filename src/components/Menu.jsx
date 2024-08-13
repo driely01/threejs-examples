@@ -17,6 +17,7 @@ const Menu = () => {
 				<Links path='/' name='shadow contorls' />
 				<Links path='first' name='first geometry' />
 				<Links path='earth' name='earth 3D model' />
+				<Links path='geometrytexture' name='geometry texture' />
 			</div>
 		</div>
 	)

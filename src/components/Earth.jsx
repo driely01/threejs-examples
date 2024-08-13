@@ -5,17 +5,19 @@ const Earth = () => {
 	const canvasRef = useRef(null)
 	const parentRef = useRef(null)
 
-	const [width, setWidth] = useState(0);
+	const [width, setWidth] = useState(0)
+	const [height, setHeight] = useState(0)
 	useEffect(() => {
 		if (canvasRef.current) {
 			create3DModel(canvasRef.current, 'planet')
 			function handleResize() {
 				setWidth(parentRef.current.clientWidth)
+				setHeight(parentRef.current.clientHeight)
 				create3DModel(canvasRef.current, 'planet')
 			}
 			addEventListener('resize', handleResize);
 			return () => {
-				window.removeEventListener('resize', handleResize);
+				window.removeEventListener('resize', handleResize)
 			}
 		}
 	}, [])
@@ -24,7 +26,7 @@ const Earth = () => {
 		<div ref={parentRef} className='bg-black lg:w-[calc(100vw_-300px)] w-[calc(100vw_-100px)]'>
 			<canvas 
 			ref={canvasRef} 
-			style={{ width: width ? width : '100%' }} 
+			style={{ width: width ? width : '100%', height: height ? height : '100%' }} 
 			className="h-full saturate-200"
 		>
 			
