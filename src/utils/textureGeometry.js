@@ -17,12 +17,12 @@ export const textureGeometry = (canvas) => {
 
 	//loading texture
 	const textureLoader = new THREE.TextureLoader();
-	const ambientTexture = textureLoader.load('./textures/ambientOcclusion.png')
-	const baseColorTexture = textureLoader.load('./textures/basecolor.png')
-	const heightTexture = textureLoader.load('./textures/height.png')
-	const normalTexture = textureLoader.load('./textures/normal.png')
-	const roughnessTexture = textureLoader.load('./textures/roughness.png')
-	const translucencyTexture = textureLoader.load('./textures/translucency.png')
+	const ambientTexture = textureLoader.load('./textures/stoune/ambientOcclusion.png')
+	const baseColorTexture = textureLoader.load('./textures/stoune/basecolor.png')
+	const heightTexture = textureLoader.load('./textures/stoune/height.png')
+	const normalTexture = textureLoader.load('./textures/stoune/normal.png')
+	const roughnessTexture = textureLoader.load('./textures/stoune/roughness.png')
+	const translucencyTexture = textureLoader.load('./textures/stoune/translucency.png')
 
 	//add cube render target
 	const cubeRenderTarget = new THREE.WebGLCubeRenderTarget(128, {

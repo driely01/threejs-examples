@@ -18,6 +18,7 @@ const Menu = () => {
 				<Links path='first' name='first geometry' />
 				<Links path='earth' name='earth 3D model' />
 				<Links path='geometrytexture' name='geometry texture' />
+				<Links path='realistic' name='HDR background' />
 			</div>
 		</div>
 	)
